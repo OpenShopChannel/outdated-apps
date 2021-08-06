@@ -1,0 +1,49 @@
+name: Outdated App Report
+description: File a report for an outdated listing
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this outdated listing report! **The name of the issue should be the name of the reported listing.**
+  - type: input
+    id: current-version
+    attributes:
+      label: Currently Listed Version
+      description: The version of the app / theme currently listed on the Open Shop Channel.
+      placeholder: ex. v1.0.0
+    validations:
+      required: true
+  - type: input
+    id: new-version-url
+    attributes:
+      label: URL to new version
+      description: Preferrably a GitHub link, or author website. Do not link directly to the zip file or to Google Drive / OneDrive / etc.
+      placeholder: ex. https://example.com/newappversion/
+    validations:
+      required: true
+  - type: input
+    id: updated-version
+    attributes:
+      label: Version of Updated App
+      description: The version of the updated app / theme.
+      placeholder: ex. v1.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Select listing type
+      description: Is it an app or a theme?
+      options:
+        - Apps
+        - Themes
+    validations:
+      required: true
+  - type: textarea
+    id: more-information
+    attributes:
+      label: More Information
+      description: Is there anything special we should know?
+      value: "No."
+    validations:
+      required: false
